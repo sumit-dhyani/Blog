@@ -1,0 +1,10 @@
+{% for instance in object_list %}
+<li>
+    <h3 ><a style='text-decoration: none;'href="{{instance.get_absolute_url}}">{{instance.Title}}</a></h3>
+    <time>{{instance.Date}}</time>
+    <p  class="truncated ">{{instance.Description}}</p>
+    
+</li>
+{% endfor %}
+{{object.Title}}
+{{object.Description}}

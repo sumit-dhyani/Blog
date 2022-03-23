@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <title>Blog</title>
+    <link rel="stylesheet" href="{% static 'posts.css' %}"
+</head>
+<body id="grad">
+<nav class="navbar">
+    <div class="title"><a href='../'>My First blog</a></div>
+</nav>
+<ul class="container">
+    
+    <li>
+        <h3>{{post.Title}}</h3>
+        <time>{{post.Date}}</time>
+        <p class="truncated ">{{post.Description}}</p>
+        
+    </li>
+    
+</ul>
+</body>
+</head>
+</html>

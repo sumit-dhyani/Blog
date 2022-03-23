@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <title>Blog</title>
+    <link rel="stylesheet" href="{% static 'new.css' %}"
+</head>
+<body id="grad">
+<nav class="navbar">
+    <div class="title"><a href='../'>My First blog</a></div>
+    <a href='/login' class="login">Sign In</a>
+</nav>
+<ul class="container">
+    {% for b in blog reversed %}
+    <li>
+        <h3 ><a href="{{b.get_absolute_url}}">{{b.Title}}</a></h3>
+        <time>{{b.Date}}</time>
+        <p  class="truncated ">{{b.Description}}</p>
+        
+    </li>
+    {% endfor %}
+</ul>
+</body>
+</head>
+</html>
