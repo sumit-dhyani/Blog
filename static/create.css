@@ -1,0 +1,27 @@
+.navbar a{
+    margin-right:40px;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration:none;
+}
+.navbar{
+    
+    align-items: center;
+
+    color: var(--white);
+    display: flex;
+    font-family: Exo Regular,Helvetica,sans-serif;
+    left: 0;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    position: fixed;
+    top: 0;
+    
+    transition: background-color .2s;
+    width: 100%;
+    z-index: 2;
+    
+    background-color: rgb(82, 26, 26);
+    
+        /* height:100%;
+        width:100%; */
+}

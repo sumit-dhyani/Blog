@@ -10,7 +10,7 @@
     display: flex;
     font-family: Exo Regular,Helvetica,sans-serif;
     left: 0;
-    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
     position: fixed;
     top: 0;
     text-decoration: none;
@@ -28,7 +28,7 @@
 .title{
     flex-grow: 1;
     font-size: 25px;
-    margin:19px;
+    margin:15px;
     margin-left:40px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     justify-content: center;
@@ -55,7 +55,7 @@ li > h3 {
     font-family:Exo ExtraBold,Helvetica,sans-serif;
 
 }
-p{
+.truncated{
     line-height: 1.6;
     
         overflow: hidden;
@@ -77,3 +77,6 @@ time{
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-decoration: none;
 }
+/* div a:active{
+    background-color: Yellow;
+} */
