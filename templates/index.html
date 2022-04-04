@@ -23,16 +23,19 @@
 <br>
 <ul class="container" style="margin-top:25px">
     {% if user.is_authenticated %}
+   
     {% for b in object_list reversed %}
     <li>
-        <h3 ><a href="{{b.get_absolute_url}}">{{b.Title}}</a> <a style="font-size: 18px;margin-left: 10px;text-decoration: none;"href="{% url 'Update_view' b.pk %}"> (edit)</a></h3>
+        <h3 ><a href="{{b.get_absolute_url}}">{{b.Title}}</a> <a style="font-size: 18px;margin-left: 10px;text-decoration: none;"href="{% url 'Update_view' b.pk %}"> (edit)</a>
+            <a style="font-size: 18px;margin-left: 10px;text-decoration: none;"href="{% url 'delete_view' b.pk %}"> (delete)</a>
+        </h3>
         <time>{{b.Date}}</time>
         <p  class="truncated " >{{b.Description|slice:":300"|safe}}</p>
-        
-        
+          
     </li>
-    {% endfor %}
-    {%else%}
+        {% endfor %}
+        
+    {% else %}
     {% for b in object_list reversed %}
     <li>
         <h3 ><a href="{{b.get_absolute_url}}">{{b.Title}}</a></h3>
@@ -42,6 +45,7 @@
         
     </li>
     {% endfor %}
+    
     {% endif %}
 </ul>
 </body>

@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from project.views import BlogListView,BlogDetailView,BlogCreateView,BlogUpdateView
+from project.models import Blog
+from project.views import BlogListView,BlogDetailView,BlogCreateView,BlogUpdateView,BlogDeleteView,Blog_detail,Blog_List
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,8 +24,12 @@ urlpatterns = [
     path('post=<int:pk>',BlogDetailView.as_view(),name='posts'),
     path('create',BlogCreateView.as_view(),name='createview'),
     path('post=<int:pk>/update',BlogUpdateView.as_view(),name='Update_view'),
+    path('post=<int:pk>/delete',BlogDeleteView.as_view(),name='delete_view'),
     path('members/',include('django.contrib.auth.urls')),
     path('members/',include('members.urls')),
+    path('api',Blog_List.as_view()),
+    path('api/<int:pk>',Blog_detail.as_view()),
+
     # path('blog',include('blog2.urls')),
 
 ]   
